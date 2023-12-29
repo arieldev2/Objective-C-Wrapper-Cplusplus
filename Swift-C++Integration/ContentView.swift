@@ -10,13 +10,18 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
             Text("Hello, world!")
         }
         .padding()
+        .onAppear{
+            print(MathOperationWrapper.add(3, b: 3))
+            print(MathOperationWrapper.subtract(10, b: 2))
+            print(MathOperationWrapper.multiply(2, b: 5))
+            print(MathOperationWrapper.divide(50, b: 2))
+
+        }
     }
+
 }
 
 #Preview {
